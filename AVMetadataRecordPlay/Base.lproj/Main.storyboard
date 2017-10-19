@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDV-RU-4h7">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Que représente le Canada pour vous ? Cliquez ici pour enregistrer votre vidéo ! What does Canada mean to you ? Click here to start your video !-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="camera" extendedLayoutIncludesOpaqueBars="YES" id="vXZ-lx-hvc" customClass="CameraViewController" customModule="AVMetadataRecordPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Jq-MA-LRi"/>
+                        <viewControllerLayoutGuide type="bottom" id="tvj-7s-n29"/>
+                    </layoutGuides>
+                    <string key="title">Que représente le Canada pour vous ? Cliquez ici pour enregistrer votre vidéo !
+What does Canada mean to you ? Click here to start your video !</string>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVI-mX-69Q" customClass="PreviewView" customModule="AVMetadataRecordPlay" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc9-zH-fpT">
+                                        <rect key="frame" x="457" y="370" width="118" height="28"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Tap to resume"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resumeInterruptedSession:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="X76-go-gq9"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm0-Ha-odG">
+                                        <rect key="frame" x="440" y="374" width="152" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghq-cJ-efm">
+                                        <rect key="frame" x="0.0" y="732" width="1032" height="36"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Cliquez ici pour enregistrez votre vidéo - Click here to start your vidéo !"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="toggleMovieRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2wa-Oy-RfQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="ghq-cJ-efm" firstAttribute="centerX" secondItem="sVI-mX-69Q" secondAttribute="centerX" id="7zG-Nd-15v"/>
+                                    <constraint firstAttribute="trailing" secondItem="ghq-cJ-efm" secondAttribute="trailing" id="8T9-Zy-gYU"/>
+                                    <constraint firstItem="Vm0-Ha-odG" firstAttribute="centerX" secondItem="sVI-mX-69Q" secondAttribute="centerX" id="Q24-Dg-okF"/>
+                                    <constraint firstItem="Vm0-Ha-odG" firstAttribute="centerX" secondItem="sVI-mX-69Q" secondAttribute="centerX" id="TM4-W5-F4l"/>
+                                    <constraint firstItem="wc9-zH-fpT" firstAttribute="centerY" secondItem="sVI-mX-69Q" secondAttribute="centerY" id="oLu-OE-D08"/>
+                                    <constraint firstItem="Vm0-Ha-odG" firstAttribute="centerY" secondItem="sVI-mX-69Q" secondAttribute="centerY" id="oMo-7a-xyd"/>
+                                    <constraint firstItem="wc9-zH-fpT" firstAttribute="centerX" secondItem="sVI-mX-69Q" secondAttribute="centerX" id="qUB-Ny-qqH"/>
+                                    <constraint firstAttribute="bottom" secondItem="ghq-cJ-efm" secondAttribute="bottom" id="zHZ-Xc-tii"/>
+                                    <constraint firstItem="ghq-cJ-efm" firstAttribute="leading" secondItem="sVI-mX-69Q" secondAttribute="leading" id="zoS-9x-Xgt"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TM4-W5-F4l"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="sVI-mX-69Q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-24" id="6xD-bE-j4m"/>
+                            <constraint firstItem="sVI-mX-69Q" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="24" id="KGF-Kd-1cs"/>
+                            <constraint firstItem="sVI-mX-69Q" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ZvV-TN-BSN"/>
+                            <constraint firstItem="sVI-mX-69Q" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="p9I-6Q-AID"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Que représente le Canada pour vous ?  - What does Canada mean to you ?" id="s74-NR-qa1">
+                        <barButtonItem key="backBarButtonItem" title="Enregistrement" id="hSi-Fk-j4K"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraUnavailableLabel" destination="Vm0-Ha-odG" id="b1a-ue-V4u"/>
+                        <outlet property="previewView" destination="sVI-mX-69Q" id="UGh-um-teZ"/>
+                        <outlet property="recordButton" destination="ghq-cJ-efm" id="Tcb-VB-crw"/>
+                        <outlet property="resumeButton" destination="wc9-zH-fpT" id="eer-GI-bxN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="-250"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="msF-sz-zJh">
+            <objects>
+                <viewController storyboardIdentifier="home" id="t1H-KF-DdE" customClass="HomeViewController" customModule="AVMetadataRecordPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aiT-BK-9SF"/>
+                        <viewControllerLayoutGuide type="bottom" id="r7b-ak-KHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BkH-MG-vim">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fond-home" translatesAutoresizingMaskIntoConstraints="NO" id="b6g-ST-BDD">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="flG-Xe-T2I">
+                                <rect key="frame" x="64" y="657" width="685" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.92496854026845643" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal">
+                                    <string key="title">Que représente le Canada pour vous ? Cliquez ici pour enregistrer votre vidéo !
+What does Canada mean to you ? Click here to start your video !</string>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="gm2-jx-ToF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b6g-ST-BDD" firstAttribute="leading" secondItem="BkH-MG-vim" secondAttribute="leading" id="4EX-dZ-2aZ"/>
+                            <constraint firstItem="b6g-ST-BDD" firstAttribute="top" secondItem="BkH-MG-vim" secondAttribute="top" id="PJs-5j-ozw"/>
+                            <constraint firstItem="r7b-ak-KHN" firstAttribute="top" secondItem="b6g-ST-BDD" secondAttribute="bottom" id="Q7N-5e-6lc"/>
+                            <constraint firstAttribute="trailing" secondItem="b6g-ST-BDD" secondAttribute="trailing" id="hpR-jN-W61"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XYy-Fp-AWd">
+                        <barButtonItem key="backBarButtonItem" title="home" id="K5u-y9-QYg"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ea-Va-6xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="-250"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QXs-lS-hK4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="PDV-RU-4h7" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="x2G-YY-cY2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="xDJ-XV-PXP">
+                        <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="t1H-KF-DdE" kind="relationship" relationship="rootViewController" id="0y4-E9-MZY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S21-Km-orI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-492" y="-250"/>
+        </scene>
+        <!--Visionnez votre vidéo ! Watch your video !-->
+        <scene sceneID="mbq-fA-0qG">
+            <objects>
+                <viewController storyboardIdentifier="player" id="xUS-yO-GIr" customClass="PlayerViewController" customModule="AVMetadataRecordPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SB1-ax-C8k"/>
+                        <viewControllerLayoutGuide type="bottom" id="DcQ-8C-zsN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PuO-6Q-VB0">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32C-3r-ZrH">
+                                <rect key="frame" x="20" y="28" width="984" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="CZ9-3B-qND"/>
+                                    <constraint firstAttribute="height" constant="31" id="qCc-w2-hv7"/>
+                                    <constraint firstAttribute="height" constant="20" id="ypk-XA-8SN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CZ9-3B-qND"/>
+                                        <exclude reference="qCc-w2-hv7"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPX-gO-AEB">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="724"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Envoi en cours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5V-5H-9Zc">
+                                <rect key="frame" x="456" y="358" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" alpha="0.0" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJa-R6-5Hw">
+                                <rect key="frame" x="306" y="393" width="409" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frV-sr-hfx">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ieU-hm-GEr"/>
+                                    <barButtonItem systemItem="play" id="zdW-cY-8y7">
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="xUS-yO-GIr" id="4CT-uF-mbG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="pause" id="Unk-Wh-6gy">
+                                        <connections>
+                                            <action selector="pauseButtonTapped:" destination="xUS-yO-GIr" id="0Yh-72-JeE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Y8S-BS-JbA"/>
+                                </items>
+                                <color key="tintColor" red="0.95320391414141414" green="0.85132551354074104" blue="0.16858916250943651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="32C-3r-ZrH" firstAttribute="leading" secondItem="PuO-6Q-VB0" secondAttribute="leadingMargin" id="1uY-2t-KiU"/>
+                            <constraint firstItem="frV-sr-hfx" firstAttribute="trailing" secondItem="PuO-6Q-VB0" secondAttribute="trailing" id="28y-vO-4BU"/>
+                            <constraint firstItem="frV-sr-hfx" firstAttribute="leading" secondItem="PuO-6Q-VB0" secondAttribute="leading" id="9mR-BY-v42"/>
+                            <constraint firstItem="VPX-gO-AEB" firstAttribute="trailing" secondItem="PuO-6Q-VB0" secondAttribute="trailing" id="Jma-ia-EgU"/>
+                            <constraint firstItem="frV-sr-hfx" firstAttribute="top" secondItem="PuO-6Q-VB0" secondAttribute="bottom" constant="-44" id="VDT-04-noh"/>
+                            <constraint firstItem="32C-3r-ZrH" firstAttribute="trailing" secondItem="PuO-6Q-VB0" secondAttribute="trailingMargin" id="Vp6-E1-IHq"/>
+                            <constraint firstItem="j5V-5H-9Zc" firstAttribute="centerY" secondItem="PuO-6Q-VB0" secondAttribute="centerY" constant="-15" id="X0Y-4i-bWl"/>
+                            <constraint firstItem="32C-3r-ZrH" firstAttribute="top" secondItem="SB1-ax-C8k" secondAttribute="bottom" constant="8" id="f0h-6k-d8m"/>
+                            <constraint firstItem="frV-sr-hfx" firstAttribute="bottom" secondItem="PuO-6Q-VB0" secondAttribute="bottom" id="hE1-rH-1EC"/>
+                            <constraint firstItem="j5V-5H-9Zc" firstAttribute="centerX" secondItem="PuO-6Q-VB0" secondAttribute="centerX" id="hPe-mK-gqg"/>
+                            <constraint firstItem="VPX-gO-AEB" firstAttribute="bottom" secondItem="PuO-6Q-VB0" secondAttribute="bottom" constant="-44" id="q6Q-V3-esj"/>
+                            <constraint firstItem="VPX-gO-AEB" firstAttribute="leading" secondItem="PuO-6Q-VB0" secondAttribute="leading" id="qpS-ws-v6L"/>
+                            <constraint firstItem="VPX-gO-AEB" firstAttribute="top" secondItem="PuO-6Q-VB0" secondAttribute="top" id="sQV-R7-bMT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Visionnez votre vidéo ! Watch your video !" id="3me-oa-9ap">
+                        <barButtonItem key="backBarButtonItem" title="enregistrement" id="6QX-eO-VZf"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="envoiEnCours" destination="j5V-5H-9Zc" id="RFW-0q-YQi"/>
+                        <outlet property="locationOverlayLabel" destination="32C-3r-ZrH" id="YY6-JM-6xr"/>
+                        <outlet property="pauseButton" destination="Unk-Wh-6gy" id="tj8-aB-14p"/>
+                        <outlet property="playButton" destination="zdW-cY-8y7" id="VHd-K6-Uk9"/>
+                        <outlet property="playerView" destination="VPX-gO-AEB" id="K0m-zX-lEE"/>
+                        <outlet property="progressIndicator" destination="cJa-R6-5Hw" id="qTK-Xj-yNr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0Q-Yw-gVs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085" y="-250"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fond-home" width="1024" height="768"/>
+    </resources>
+    <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

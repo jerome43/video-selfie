@@ -1,0 +1,6 @@
+framework module Pods_AVMetadataRecordPlay {
+  umbrella header "Pods-AVMetadataRecordPlay-umbrella.h"
+
+  export *
+  module * { export * }
+}
